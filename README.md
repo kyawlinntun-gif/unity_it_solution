@@ -1,12 +1,4 @@
-run migrate with seed
-
-Laravel ui, bootstrap
-
-Item (CRUD) with js and axios and fetch
-
-export item and customer
-
-customer manage their account as user
+# Run php artisan migrate --seed
 
 # Shopping Cart Simple Project
 
