@@ -3,7 +3,7 @@
 # Shopping Cart Simple Project
 
     In this project, I use following language:
-        1. Laravel, Bootstrap, Axios and Fetch
+        1. Laravel, JavaScript, Bootstrap, Axios and Fetch
     
     There are two main parts:
         1. Admin
