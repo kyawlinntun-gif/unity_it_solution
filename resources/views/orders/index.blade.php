@@ -18,20 +18,22 @@
                                 <tr>
                                     <th>Customer Name</th>
                                     <th>Item name</th>
-                                    <th>Description</th>
-                                    <th>price</th>
+                                    <th>Price</th>
+                                    <th>Count</th>
                                     <th>Paid</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($orders as $order)
+                                @foreach ($orders as $customer => $items)
+                                    @foreach ($items['item_name'] as $item => $details)
                                     <tr>
-                                        <td>{{ $order->customer_name }}</td>
-                                        <td>{{ $order->item_name }}</td>
-                                        <td>{{ $order->description }}</td>
-                                        <td>{{ $order->price }}</td>
-                                        <td>{{ $order->paid ? "Yes" : "No" }}</td>
+                                        <td>{{ $customer }}</td>
+                                        <td>{{ $item }}</td>
+                                        <td>{{ $details['total_price'] }}</td>
+                                        <td>{{ $details['total_count'] }}</td>
+                                        <td>{{ $items['item_paid'][0] ? "Yes" : "No" }}</td>
                                     </tr>
+                                    @endforeach
                                 @endforeach
                             </tbody>
                         </table>
